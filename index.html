@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Portfolio website for Hasibul Islam, a developer building practical web, backend, and data projects.">
-    <meta name="theme-color" content="#f8ef4f">
-    <meta property="og:title" content="Hasibul Islam | Developer Portfolio">
-    <meta property="og:description" content="Neobrutalist portfolio featuring selected projects, skills, and contact links.">
+    <meta name="description" content="Portfolio website for Hasibul Islam, a full-stack developer working across web, backend, and applied computing projects.">
+    <meta name="theme-color" content="#f4efe5">
+    <meta property="og:title" content="Hasibul Islam | Full-Stack Developer">
+    <meta property="og:description" content="A modern soft-brutalist developer portfolio with selected projects, stack, and GitHub links.">
     <meta property="og:type" content="website">
-    <title>Hasibul Islam | Developer Portfolio</title>
+    <title>Hasibul Islam | Full-Stack Developer</title>
     <link rel="stylesheet" href="styles/site.css">
   </head>
   <body>
@@ -20,167 +20,176 @@
         <span>Hasibul Islam</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#stack">Stack</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Full-stack developer / practical problem solver</p>
-          <h1 id="hero-title">Building direct, useful software with a bold edge.</h1>
+      <section class="hero" id="top">
+        <div class="hero-content">
+          <p class="kicker">Full-stack developer</p>
+          <h1>Hasibul Islam builds practical web and backend projects.</h1>
           <p class="hero-text">
-            I am Hasibul Islam. I work across web applications, backend systems, data experiments, and learning projects, with repositories spanning C#, JavaScript, PHP, Python, Java, HTML, and notebooks.
+            I work across front-end interfaces, server-side applications, APIs, and applied computing exercises. My public GitHub projects show a hands-on path through C#, JavaScript, PHP, Python, Java, HTML, and notebooks.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/sifathasib">View GitHub</a>
-            <a class="button button-secondary" href="#work">See projects</a>
+            <a class="button primary" href="#work">View projects</a>
+            <a class="button secondary" href="https://github.com/sifathasib">GitHub profile</a>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <img src="assets/profile-mark.svg" alt="Abstract neobrutalist HI profile mark">
-          <div class="status-card">
-            <span class="status-label">Current focus</span>
-            <strong>Portfolio, web apps, backend APIs, and applied computing.</strong>
-          </div>
+        <aside class="profile-panel" aria-label="Portfolio summary">
+          <img src="assets/profile-mark.svg" alt="Hasibul Islam initials mark">
+          <dl>
+            <div>
+              <dt>Focus</dt>
+              <dd>Web apps, backend APIs, applied computing</dd>
+            </div>
+            <div>
+              <dt>Public work</dt>
+              <dd><a href="https://github.com/sifathasib?tab=repositories">GitHub repositories</a></dd>
+            </div>
+            <div>
+              <dt>Style</dt>
+              <dd>Simple builds, clear interfaces, practical learning</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div>
+          <p class="kicker">About</p>
+          <h2 id="about-title">Developer portfolio with a practical engineering base.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            This portfolio highlights projects from my public GitHub profile and organizes them into a cleaner, recruiter-friendly story: application development, backend practice, computing fundamentals, and machine learning exploration.
+          </p>
+          <ul class="quick-facts">
+            <li>C# / ASP.NET</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>Java</li>
+            <li>HTML / CSS</li>
+          </ul>
         </div>
       </section>
 
-      <section class="section intro-grid" aria-label="Highlights">
-        <article class="metric">
-          <span>Languages</span>
-          <strong>7+</strong>
-          <p>C#, JavaScript, PHP, Python, Java, HTML, notebooks.</p>
-        </article>
-        <article class="metric metric-yellow">
-          <span>Project Style</span>
-          <strong>Hands-on</strong>
-          <p>Small, focused builds that turn course work and ideas into running code.</p>
-        </article>
-        <article class="metric metric-blue">
-          <span>Home Base</span>
-          <strong>GitHub</strong>
-          <p>Public work lives under <a href="https://github.com/sifathasib">@sifathasib</a>.</p>
-        </article>
-      </section>
-
-      <section class="section split-section" id="work" aria-labelledby="work-title">
+      <section class="section" id="work" aria-labelledby="work-title">
         <div class="section-heading">
-          <p class="eyebrow">Selected work</p>
-          <h2 id="work-title">Projects from the public repo shelf.</h2>
+          <p class="kicker">Selected projects</p>
+          <h2 id="work-title">A focused look at the work.</h2>
+          <p>Each card points to a real public repository and explains what the project demonstrates.</p>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="card-topline">
-              <span class="tag">C#</span>
-              <a href="https://github.com/sifathasib/ASP.NET-MVC-HR">Repo</a>
+        <div class="project-list">
+          <article class="project-card featured">
+            <div class="project-meta">
+              <span>C#</span>
+              <a href="https://github.com/sifathasib/ASP.NET-MVC-HR">Repository</a>
             </div>
             <h3>ASP.NET MVC HR</h3>
-            <p>A human resources application project built with the ASP.NET MVC ecosystem.</p>
-          </article>
-
-          <article class="project-card accent-yellow">
-            <div class="card-topline">
-              <span class="tag">JavaScript</span>
-              <a href="https://github.com/sifathasib/express-rest-mongo">Repo</a>
-            </div>
-            <h3>Express REST Mongo</h3>
-            <p>A backend API practice project using Express and MongoDB-style application structure.</p>
-          </article>
-
-          <article class="project-card accent-pink">
-            <div class="card-topline">
-              <span class="tag">Python</span>
-              <a href="https://github.com/sifathasib/Graph-Theory">Repo</a>
-            </div>
-            <h3>Graph Theory</h3>
-            <p>Computing exercises and graph-focused problem solving in Python.</p>
-          </article>
-
-          <article class="project-card accent-blue">
-            <div class="card-topline">
-              <span class="tag">PHP</span>
-              <a href="https://github.com/sifathasib/php-hr-app">Repo</a>
-            </div>
-            <h3>PHP HR App</h3>
-            <p>A PHP web application project exploring HR workflows and server-rendered logic.</p>
-          </article>
-
-          <article class="project-card accent-green">
-            <div class="card-topline">
-              <span class="tag">JavaScript</span>
-              <a href="https://github.com/sifathasib/Web_based_image_editor">Repo</a>
-            </div>
-            <h3>Web Based Image Editor</h3>
-            <p>A browser-based image editing project focused on interactive front-end behavior.</p>
+            <p>
+              A human resources application project that demonstrates server-rendered web application structure, MVC organization, and C# backend development.
+            </p>
+            <ul class="project-points">
+              <li>Application architecture practice</li>
+              <li>ASP.NET MVC workflow</li>
+              <li>Business-domain CRUD patterns</li>
+            </ul>
           </article>
 
           <article class="project-card">
-            <div class="card-topline">
-              <span class="tag">Notebook</span>
-              <a href="https://github.com/sifathasib/Springer_ML_CrashCourse">Repo</a>
+            <div class="project-meta">
+              <span>JavaScript</span>
+              <a href="https://github.com/sifathasib/express-rest-mongo">Repository</a>
+            </div>
+            <h3>Express REST Mongo</h3>
+            <p>REST API practice using Express-style routing, backend endpoints, and data persistence concepts.</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Python</span>
+              <a href="https://github.com/sifathasib/Graph-Theory">Repository</a>
+            </div>
+            <h3>Graph Theory</h3>
+            <p>Python exercises focused on graph concepts, algorithms, and computing fundamentals.</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>PHP</span>
+              <a href="https://github.com/sifathasib/php-hr-app">Repository</a>
+            </div>
+            <h3>PHP HR App</h3>
+            <p>A PHP web application project exploring HR workflows, server-side logic, and structured forms.</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>JavaScript</span>
+              <a href="https://github.com/sifathasib/Web_based_image_editor">Repository</a>
+            </div>
+            <h3>Web Based Image Editor</h3>
+            <p>A front-end interaction project that explores image editing behavior in the browser.</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Notebook</span>
+              <a href="https://github.com/sifathasib/Springer_ML_CrashCourse">Repository</a>
             </div>
             <h3>ML Crash Course</h3>
-            <p>Notebook-driven experiments and learning material around machine learning concepts.</p>
+            <p>Notebook-based machine learning practice and experimentation around core ML concepts.</p>
           </article>
         </div>
       </section>
 
-      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+      <section class="section stack-section" id="stack" aria-labelledby="stack-title">
         <div class="section-heading">
-          <p class="eyebrow">Capabilities</p>
-          <h2 id="skills-title">A practical stack for full-cycle builds.</h2>
+          <p class="kicker">Stack</p>
+          <h2 id="stack-title">Tools and areas I work with.</h2>
         </div>
 
-        <div class="skills-board">
-          <div class="skill-column">
-            <h3>Web</h3>
-            <ul>
-              <li>HTML, CSS, JavaScript</li>
-              <li>React practice projects</li>
-              <li>Responsive static sites</li>
-            </ul>
-          </div>
-          <div class="skill-column">
+        <div class="stack-grid">
+          <article>
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, responsive layouts, browser-based interactions, and React practice projects.</p>
+          </article>
+          <article>
             <h3>Backend</h3>
-            <ul>
-              <li>ASP.NET MVC and C#</li>
-              <li>Express APIs</li>
-              <li>PHP application logic</li>
-            </ul>
-          </div>
-          <div class="skill-column">
+            <p>C#, ASP.NET MVC, Express APIs, PHP applications, routing, forms, and database-backed workflows.</p>
+          </article>
+          <article>
             <h3>Computing</h3>
-            <ul>
-              <li>Python exercises</li>
-              <li>Graph theory</li>
-              <li>Machine learning notebooks</li>
-            </ul>
-          </div>
+            <p>Python, graph theory, Java exercises, Jupyter notebooks, machine learning learning projects, and algorithms.</p>
+          </article>
         </div>
       </section>
 
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Want to see the code?</h2>
+          <p class="kicker">Contact</p>
+          <h2 id="contact-title">Explore the code and repositories.</h2>
           <p>
-            The fastest way to explore my work is through GitHub. This site is intentionally lightweight, direct, and easy to update as new projects ship.
+            The portfolio is built to be easy to update as new projects become more complete. The GitHub profile has the full public project list.
           </p>
         </div>
         <div class="contact-actions">
-          <a class="button button-primary" href="https://github.com/sifathasib">GitHub Profile</a>
-          <a class="button button-secondary" href="https://github.com/sifathasib?tab=repositories">Repositories</a>
+          <a class="button primary" href="https://github.com/sifathasib">Open GitHub</a>
+          <a class="button secondary" href="https://github.com/sifathasib?tab=repositories">All repositories</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Designed and built for GitHub Pages.</span>
+      <span>&copy; <span id="year">2026</span> Hasibul Islam</span>
       <a href="#top">Back to top</a>
     </footer>
 

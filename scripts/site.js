@@ -1,15 +1,23 @@
-const cards = document.querySelectorAll(".project-card, .metric, .skill-column");
+const year = document.querySelector("#year");
 
-cards.forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const rect = card.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 4;
-    const y = ((event.clientY - rect.top) / rect.height - 0.5) * -4;
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-    card.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
-  });
+const sections = [...document.querySelectorAll("main section[id]")];
+const navLinks = [...document.querySelectorAll(".nav-links a")];
 
-  card.addEventListener("pointerleave", () => {
-    card.style.transform = "";
-  });
-});
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      navLinks.forEach((link) => {
+        link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+      });
+    });
+  },
+  { rootMargin: "-40% 0px -50% 0px" }
+);
+
+sections.forEach((section) => observer.observe(section));

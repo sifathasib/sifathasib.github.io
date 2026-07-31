@@ -1,16 +1,14 @@
 <svg width="960" height="960" viewBox="0 0 960 960" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Hasibul Islam profile mark</title>
-  <desc id="desc">A bold neobrutalist geometric mark with the initials H and I.</desc>
-  <rect width="960" height="960" fill="#F8EF4F"/>
-  <path d="M132 126H816V810H132V126Z" fill="#FFFDF2" stroke="#111111" stroke-width="28"/>
-  <path d="M206 214H374V430H586V214H754V746H586V534H374V746H206V214Z" fill="#43B7FF" stroke="#111111" stroke-width="24" stroke-linejoin="round"/>
-  <path d="M674 214H754V746H674V214Z" fill="#FF6BCB" stroke="#111111" stroke-width="24"/>
-  <path d="M206 214H292V746H206V214Z" fill="#4BE38A" stroke="#111111" stroke-width="24"/>
-  <path d="M130 808L206 746H754L816 808H130Z" fill="#FF8A3D" stroke="#111111" stroke-width="24" stroke-linejoin="round"/>
-  <circle cx="759" cy="167" r="74" fill="#FF6BCB" stroke="#111111" stroke-width="24"/>
-  <circle cx="178" cy="797" r="56" fill="#4BE38A" stroke="#111111" stroke-width="24"/>
-  <path d="M129 125L64 64" stroke="#111111" stroke-width="24" stroke-linecap="square"/>
-  <path d="M831 125L896 64" stroke="#111111" stroke-width="24" stroke-linecap="square"/>
-  <path d="M831 831L896 896" stroke="#111111" stroke-width="24" stroke-linecap="square"/>
-  <path d="M129 831L64 896" stroke="#111111" stroke-width="24" stroke-linecap="square"/>
+  <title id="title">Hasibul Islam initials mark</title>
+  <desc id="desc">A soft brutalist portfolio mark with the initials H and I.</desc>
+  <rect width="960" height="960" fill="#F3DF6C"/>
+  <rect x="96" y="96" width="768" height="768" rx="28" fill="#FFFAF0" stroke="#171717" stroke-width="20"/>
+  <rect x="178" y="206" width="150" height="548" rx="16" fill="#BCEBD4" stroke="#171717" stroke-width="18"/>
+  <rect x="632" y="206" width="150" height="548" rx="16" fill="#A8D8FF" stroke="#171717" stroke-width="18"/>
+  <rect x="286" y="414" width="390" height="132" rx="16" fill="#FFB4A2" stroke="#171717" stroke-width="18"/>
+  <rect x="414" y="206" width="132" height="548" rx="16" fill="#D8C8FF" stroke="#171717" stroke-width="18"/>
+  <circle cx="774" cy="178" r="54" fill="#171717"/>
+  <circle cx="186" cy="774" r="54" fill="#171717"/>
+  <path d="M118 842L196 764" stroke="#171717" stroke-width="18" stroke-linecap="round"/>
+  <path d="M842 118L764 196" stroke="#171717" stroke-width="18" stroke-linecap="round"/>
 </svg>
