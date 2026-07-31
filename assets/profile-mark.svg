@@ -1,0 +1,16 @@
+<svg width="960" height="960" viewBox="0 0 960 960" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Hasibul Islam profile mark</title>
+  <desc id="desc">A bold neobrutalist geometric mark with the initials H and I.</desc>
+  <rect width="960" height="960" fill="#F8EF4F"/>
+  <path d="M132 126H816V810H132V126Z" fill="#FFFDF2" stroke="#111111" stroke-width="28"/>
+  <path d="M206 214H374V430H586V214H754V746H586V534H374V746H206V214Z" fill="#43B7FF" stroke="#111111" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M674 214H754V746H674V214Z" fill="#FF6BCB" stroke="#111111" stroke-width="24"/>
+  <path d="M206 214H292V746H206V214Z" fill="#4BE38A" stroke="#111111" stroke-width="24"/>
+  <path d="M130 808L206 746H754L816 808H130Z" fill="#FF8A3D" stroke="#111111" stroke-width="24" stroke-linejoin="round"/>
+  <circle cx="759" cy="167" r="74" fill="#FF6BCB" stroke="#111111" stroke-width="24"/>
+  <circle cx="178" cy="797" r="56" fill="#4BE38A" stroke="#111111" stroke-width="24"/>
+  <path d="M129 125L64 64" stroke="#111111" stroke-width="24" stroke-linecap="square"/>
+  <path d="M831 125L896 64" stroke="#111111" stroke-width="24" stroke-linecap="square"/>
+  <path d="M831 831L896 896" stroke="#111111" stroke-width="24" stroke-linecap="square"/>
+  <path d="M129 831L64 896" stroke="#111111" stroke-width="24" stroke-linecap="square"/>
+</svg>

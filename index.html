@@ -1,24 +1,189 @@
 <!DOCTYPE html>
-<html>
-    <header>
-        <meta charset="utf-8">
-        <title>My test page</title>
-        <link rel="stylesheet" href="styles/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio website for Hasibul Islam, a developer building practical web, backend, and data projects.">
+    <meta name="theme-color" content="#f8ef4f">
+    <meta property="og:title" content="Hasibul Islam | Developer Portfolio">
+    <meta property="og:description" content="Neobrutalist portfolio featuring selected projects, skills, and contact links.">
+    <meta property="og:type" content="website">
+    <title>Hasibul Islam | Developer Portfolio</title>
+    <link rel="stylesheet" href="styles/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Hasibul Islam home">
+        <span class="brand-mark">HI</span>
+        <span>Hasibul Islam</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
-    <body>
-        <h1>Mozilla is cool</h1>
-        <img src="images/firefox-icon.png" alt="my test image">
-        <p>My cat is <strong>very</strong> grumpy.</p>
-        <p>at mozila we are a global community</p>
-        <ul>
-            <li>technoogies</li>
-            <li>thinkers</li>
-            <li>builders</li>
-        </ul>
-        <p>working together Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus fugiat dolore, consequuntur necessitatibus dolores rem est commodi amet iure dignissimos quasi neque consectetur debitis enim, officiis vero laboriosam quas. Reprehenderit.</p>
-        <p>Read the <a href="https://www.google.com">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
-        <button>Change user</button>
-        <script src="scripts/main.js"></script>
-    </body>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Full-stack developer / practical problem solver</p>
+          <h1 id="hero-title">Building direct, useful software with a bold edge.</h1>
+          <p class="hero-text">
+            I am Hasibul Islam. I work across web applications, backend systems, data experiments, and learning projects, with repositories spanning C#, JavaScript, PHP, Python, Java, HTML, and notebooks.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/sifathasib">View GitHub</a>
+            <a class="button button-secondary" href="#work">See projects</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="assets/profile-mark.svg" alt="Abstract neobrutalist HI profile mark">
+          <div class="status-card">
+            <span class="status-label">Current focus</span>
+            <strong>Portfolio, web apps, backend APIs, and applied computing.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-grid" aria-label="Highlights">
+        <article class="metric">
+          <span>Languages</span>
+          <strong>7+</strong>
+          <p>C#, JavaScript, PHP, Python, Java, HTML, notebooks.</p>
+        </article>
+        <article class="metric metric-yellow">
+          <span>Project Style</span>
+          <strong>Hands-on</strong>
+          <p>Small, focused builds that turn course work and ideas into running code.</p>
+        </article>
+        <article class="metric metric-blue">
+          <span>Home Base</span>
+          <strong>GitHub</strong>
+          <p>Public work lives under <a href="https://github.com/sifathasib">@sifathasib</a>.</p>
+        </article>
+      </section>
+
+      <section class="section split-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Projects from the public repo shelf.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="card-topline">
+              <span class="tag">C#</span>
+              <a href="https://github.com/sifathasib/ASP.NET-MVC-HR">Repo</a>
+            </div>
+            <h3>ASP.NET MVC HR</h3>
+            <p>A human resources application project built with the ASP.NET MVC ecosystem.</p>
+          </article>
+
+          <article class="project-card accent-yellow">
+            <div class="card-topline">
+              <span class="tag">JavaScript</span>
+              <a href="https://github.com/sifathasib/express-rest-mongo">Repo</a>
+            </div>
+            <h3>Express REST Mongo</h3>
+            <p>A backend API practice project using Express and MongoDB-style application structure.</p>
+          </article>
+
+          <article class="project-card accent-pink">
+            <div class="card-topline">
+              <span class="tag">Python</span>
+              <a href="https://github.com/sifathasib/Graph-Theory">Repo</a>
+            </div>
+            <h3>Graph Theory</h3>
+            <p>Computing exercises and graph-focused problem solving in Python.</p>
+          </article>
+
+          <article class="project-card accent-blue">
+            <div class="card-topline">
+              <span class="tag">PHP</span>
+              <a href="https://github.com/sifathasib/php-hr-app">Repo</a>
+            </div>
+            <h3>PHP HR App</h3>
+            <p>A PHP web application project exploring HR workflows and server-rendered logic.</p>
+          </article>
+
+          <article class="project-card accent-green">
+            <div class="card-topline">
+              <span class="tag">JavaScript</span>
+              <a href="https://github.com/sifathasib/Web_based_image_editor">Repo</a>
+            </div>
+            <h3>Web Based Image Editor</h3>
+            <p>A browser-based image editing project focused on interactive front-end behavior.</p>
+          </article>
+
+          <article class="project-card">
+            <div class="card-topline">
+              <span class="tag">Notebook</span>
+              <a href="https://github.com/sifathasib/Springer_ML_CrashCourse">Repo</a>
+            </div>
+            <h3>ML Crash Course</h3>
+            <p>Notebook-driven experiments and learning material around machine learning concepts.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Capabilities</p>
+          <h2 id="skills-title">A practical stack for full-cycle builds.</h2>
+        </div>
+
+        <div class="skills-board">
+          <div class="skill-column">
+            <h3>Web</h3>
+            <ul>
+              <li>HTML, CSS, JavaScript</li>
+              <li>React practice projects</li>
+              <li>Responsive static sites</li>
+            </ul>
+          </div>
+          <div class="skill-column">
+            <h3>Backend</h3>
+            <ul>
+              <li>ASP.NET MVC and C#</li>
+              <li>Express APIs</li>
+              <li>PHP application logic</li>
+            </ul>
+          </div>
+          <div class="skill-column">
+            <h3>Computing</h3>
+            <ul>
+              <li>Python exercises</li>
+              <li>Graph theory</li>
+              <li>Machine learning notebooks</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Want to see the code?</h2>
+          <p>
+            The fastest way to explore my work is through GitHub. This site is intentionally lightweight, direct, and easy to update as new projects ship.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="https://github.com/sifathasib">GitHub Profile</a>
+          <a class="button button-secondary" href="https://github.com/sifathasib?tab=repositories">Repositories</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Designed and built for GitHub Pages.</span>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="scripts/site.js"></script>
+  </body>
 </html>
