@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#f5f1e8">
+    <title>Portfolio Intake | Hasibul Islam</title>
+    <link rel="stylesheet" href="styles/site.css">
+  </head>
+  <body class="intake-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Back to portfolio">
+        <span class="brand-mark">HI</span>
+        <span>Portfolio Intake</span>
+      </a>
+      <nav class="nav-links" aria-label="Intake navigation">
+        <a href="index.html">Portfolio</a>
+        <a href="#basic">Basic</a>
+        <a href="#academic">Academic</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </header>
+
+    <main id="main" class="intake-shell">
+      <section class="intake-hero">
+        <div>
+          <p class="kicker">Reusable information form</p>
+          <h1>Keep your portfolio, CV, and PhD profile details in one place.</h1>
+          <p class="hero-text">
+            Fill this over time, save drafts in this browser, then export the data file when you want the website rebuilt from your real information.
+          </p>
+        </div>
+        <aside class="intake-status" aria-live="polite">
+          <span class="label">Draft status</span>
+          <strong id="save-status">Not saved yet</strong>
+          <p>Uploaded files stay on your device. Add public links or final filenames for website use.</p>
+        </aside>
+      </section>
+
+      <form class="intake-form" id="portfolio-intake">
+        <section class="form-section" id="basic" aria-labelledby="basic-title">
+          <div class="form-section-heading">
+            <p class="kicker">Basic profile</p>
+            <h2 id="basic-title">Identity and contact</h2>
+          </div>
+          <div class="field-grid">
+            <label>
+              Full name
+              <input name="fullName" type="text" autocomplete="name" placeholder="Hasibul Islam">
+            </label>
+            <label>
+              Professional title
+              <input name="title" type="text" placeholder="Full-stack developer / Graduate research candidate">
+            </label>
+            <label>
+              Location
+              <input name="location" type="text" autocomplete="address-level2" placeholder="City, Country">
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" placeholder="name@example.com">
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="text" autocomplete="tel" placeholder="+880...">
+            </label>
+            <label>
+              LinkedIn
+              <input name="linkedin" type="url" placeholder="https://linkedin.com/in/...">
+            </label>
+            <label>
+              GitHub
+              <input name="github" type="url" placeholder="https://github.com/sifathasib">
+            </label>
+            <label>
+              Google Scholar
+              <input name="scholar" type="url" placeholder="https://scholar.google.com/...">
+            </label>
+            <label class="wide-field">
+              Short profile summary
+              <textarea name="summary" rows="4" placeholder="Write 3-5 lines for recruiters and professors."></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section" aria-labelledby="media-title">
+          <div class="form-section-heading">
+            <p class="kicker">Media and documents</p>
+            <h2 id="media-title">Photo, CV, and proof links</h2>
+          </div>
+          <div class="field-grid">
+            <label>
+              Profile photo file
+              <input name="profilePhotoFile" type="file" accept="image/*" data-file-input>
+            </label>
+            <label>
+              Profile photo URL or site path
+              <input name="profilePhotoUrl" type="text" placeholder="assets/profile.jpg or https://...">
+            </label>
+            <label>
+              CV file
+              <input name="cvFile" type="file" accept=".pdf,.doc,.docx" data-file-input>
+            </label>
+            <label>
+              CV URL or site path
+              <input name="cvUrl" type="text" placeholder="assets/Hasibul-Islam-CV.pdf or https://...">
+            </label>
+            <label class="wide-field">
+              Other important links
+              <textarea name="importantLinks" rows="4" placeholder="One per line: portfolio, demo, certificate, publication, dataset, video, etc."></textarea>
+            </label>
+            <div class="upload-preview wide-field" id="upload-preview">
+              <span class="label">Selected files</span>
+              <p>No files selected yet.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section" id="academic" aria-labelledby="academic-title">
+          <div class="form-section-heading">
+            <p class="kicker">Academic profile</p>
+            <h2 id="academic-title">Education and PhD material</h2>
+          </div>
+          <div class="field-grid">
+            <label class="wide-field">
+              Education
+              <textarea name="education" rows="5" placeholder="Degree, university, department, year, CGPA if strong, thesis/project title."></textarea>
+            </label>
+            <label class="wide-field">
+              Research interests
+              <textarea name="researchInterests" rows="4" placeholder="Machine learning, graph algorithms, distributed systems, web systems..."></textarea>
+            </label>
+            <label class="wide-field">
+              Relevant coursework
+              <textarea name="coursework" rows="4" placeholder="Algorithms, machine learning, database systems, distributed computing..."></textarea>
+            </label>
+            <label class="wide-field">
+              Publications, thesis, or writing
+              <textarea name="publications" rows="4" placeholder="Publication title, venue, status, DOI/link, thesis abstract, research proposal ideas."></textarea>
+            </label>
+            <label class="wide-field">
+              Awards, funding, leadership, teaching, or research experience
+              <textarea name="achievements" rows="5" placeholder="Scholarships, TA/RA work, awards, competitions, volunteer work, leadership."></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section" id="projects" aria-labelledby="projects-title">
+          <div class="form-section-heading">
+            <p class="kicker">Project evidence</p>
+            <h2 id="projects-title">Work to feature</h2>
+          </div>
+          <div class="field-grid">
+            <label class="wide-field">
+              Strongest projects
+              <textarea name="projects" rows="8" placeholder="For each project: name, repo/demo link, tech stack, what problem it solves, your contribution, screenshots path/link."></textarea>
+            </label>
+            <label class="wide-field">
+              Job targets
+              <textarea name="jobTargets" rows="4" placeholder="Backend developer, full-stack developer, research software engineer, data/ML intern..."></textarea>
+            </label>
+            <label class="wide-field">
+              PhD/funding targets
+              <textarea name="phdTargets" rows="4" placeholder="Countries, universities, labs, supervisors, research areas, deadlines."></textarea>
+            </label>
+            <label class="wide-field">
+              Extra notes for future portfolio updates
+              <textarea name="notes" rows="5" placeholder="Anything you want added later."></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-actions" aria-label="Form actions">
+          <button class="button primary" type="submit">Save draft</button>
+          <button class="button secondary" type="button" id="download-json">Download JSON</button>
+          <button class="button secondary" type="button" id="copy-json">Copy JSON</button>
+          <button class="button danger" type="button" id="clear-draft">Clear draft</button>
+        </section>
+      </form>
+
+      <section class="json-panel" aria-labelledby="json-title">
+        <div>
+          <p class="kicker">Export preview</p>
+          <h2 id="json-title">Portfolio data JSON</h2>
+        </div>
+        <textarea id="json-preview" rows="16" readonly></textarea>
+      </section>
+    </main>
+
+    <script src="scripts/intake.js"></script>
+  </body>
+</html>
