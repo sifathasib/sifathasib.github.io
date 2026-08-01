@@ -41,6 +41,19 @@
       </section>
 
       <form class="intake-form" id="portfolio-intake">
+        <section class="workflow-card" aria-labelledby="workflow-title">
+          <div>
+            <p class="kicker">Update workflow</p>
+            <h2 id="workflow-title">How this updates the portfolio</h2>
+          </div>
+          <ol>
+            <li>Fill or update this form anytime.</li>
+            <li>Use Preview portfolio to test the content in this browser.</li>
+            <li>Download `portfolio-data.json` and send it to me with final CV/photo files.</li>
+            <li>I publish the updated portfolio to GitHub Pages.</li>
+          </ol>
+        </section>
+
         <section class="form-section" id="basic" aria-labelledby="basic-title">
           <div class="form-section-heading">
             <p class="kicker">Basic profile</p>
@@ -175,8 +188,13 @@
 
         <section class="form-actions" aria-label="Form actions">
           <button class="button primary" type="submit">Save draft</button>
-          <button class="button secondary" type="button" id="download-json">Download JSON</button>
+          <button class="button secondary" type="button" id="preview-portfolio">Preview portfolio</button>
+          <button class="button secondary" type="button" id="download-json">Download portfolio-data.json</button>
           <button class="button secondary" type="button" id="copy-json">Copy JSON</button>
+          <label class="button file-button">
+            Import JSON
+            <input id="import-json" type="file" accept="application/json,.json">
+          </label>
           <button class="button danger" type="button" id="clear-draft">Clear draft</button>
         </section>
       </form>

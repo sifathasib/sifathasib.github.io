@@ -17,7 +17,7 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Hasibul Islam home">
         <span class="brand-mark">HI</span>
-        <span>Hasibul Islam</span>
+        <span data-portfolio="name">Hasibul Islam</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#profile">Profile</a>
@@ -30,9 +30,9 @@
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <p class="kicker">Developer / Prospective Graduate Researcher</p>
-          <h1>Building a stronger profile for software roles and funded PhD opportunities.</h1>
-          <p class="hero-text">
+          <p class="kicker" data-portfolio="title">Developer / Prospective Graduate Researcher</p>
+          <h1 data-portfolio="heroTitle">Building a stronger profile for software roles and funded PhD opportunities.</h1>
+          <p class="hero-text" data-portfolio="summary">
             I am Hasibul Islam. My work combines practical full-stack development with applied computing interests in algorithms, machine learning, distributed systems, and web-based tools.
           </p>
           <div class="hero-actions">
@@ -42,19 +42,19 @@
         </div>
 
         <aside class="profile-card" aria-label="Portfolio snapshot">
-          <img src="assets/profile-mark.svg" alt="Hasibul Islam initials mark">
+          <img src="assets/profile-mark.svg" alt="Hasibul Islam initials mark" data-portfolio-image="profile">
           <dl>
             <div>
               <dt>Target roles</dt>
-              <dd>Software developer, backend developer, web application developer</dd>
+              <dd data-portfolio="jobTargets">Software developer, backend developer, web application developer</dd>
             </div>
             <div>
               <dt>Graduate direction</dt>
-              <dd>Funded PhD or research assistantship in computing-related areas</dd>
+              <dd data-portfolio="phdTargets">Funded PhD or research assistantship in computing-related areas</dd>
             </div>
             <div>
               <dt>Evidence</dt>
-              <dd><a href="https://github.com/sifathasib?tab=repositories">Public repositories and code samples</a></dd>
+              <dd><a href="https://github.com/sifathasib?tab=repositories" data-portfolio-link="githubRepos">Public repositories and code samples</a></dd>
             </div>
           </dl>
         </aside>
@@ -76,7 +76,7 @@
           <span class="label">For supervisors</span>
           <h3>Research-ready computing profile</h3>
           <p>
-            My project history shows preparation in algorithms, Python computing, machine learning notebooks, distributed computing, and implementation work.
+            <span data-portfolio="researchSummary">My project history shows preparation in algorithms, Python computing, machine learning notebooks, distributed computing, and implementation work.</span>
           </p>
         </article>
       </section>
@@ -90,7 +90,7 @@
           </p>
         </div>
 
-        <div class="research-grid">
+        <div class="research-grid" data-portfolio-list="research">
           <article>
             <h3>Algorithms &amp; graph theory</h3>
             <p>Python-based graph theory work and computing exercises that show interest in algorithmic problem solving.</p>
@@ -121,7 +121,7 @@
           </p>
         </div>
 
-        <div class="project-list">
+        <div class="project-list" data-portfolio-list="projects">
           <article class="project-card featured">
             <div class="project-meta">
               <span>C# / ASP.NET</span>
@@ -189,7 +189,7 @@
           <p class="kicker">Skill map</p>
           <h2 id="skills-title">What reviewers can quickly evaluate.</h2>
         </div>
-        <div class="skills-grid">
+        <div class="skills-grid" data-portfolio-list="skills">
           <article>
             <h3>Software development</h3>
             <p>HTML, CSS, JavaScript, React practice, C#, ASP.NET MVC, PHP, Express APIs, and Java exercises.</p>
@@ -210,18 +210,18 @@
           <p class="kicker">Next step</p>
           <h2 id="contact-title">Review my repositories and technical direction.</h2>
           <p>
-            For job applications and funded PhD outreach, GitHub is the current source of evidence. This site can be expanded with a CV, transcript, SOP, publications, and direct email when those materials are ready.
+            <span data-portfolio="contactNote">For job applications and funded PhD outreach, GitHub is the current source of evidence. This site can be expanded with a CV, transcript, SOP, publications, and direct email when those materials are ready.</span>
           </p>
         </div>
         <div class="contact-actions">
-          <a class="button primary" href="https://github.com/sifathasib">GitHub profile</a>
-          <a class="button secondary" href="https://github.com/sifathasib?tab=repositories">All repositories</a>
+          <a class="button primary" href="https://github.com/sifathasib" data-portfolio-link="github">GitHub profile</a>
+          <a class="button secondary" href="https://github.com/sifathasib?tab=repositories" data-portfolio-link="githubRepos">All repositories</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>&copy; <span id="year">2026</span> Hasibul Islam</span>
+      <span>&copy; <span id="year">2026</span> <span data-portfolio="name">Hasibul Islam</span></span>
       <span class="footer-links">
         <a href="intake.html">Update info</a>
         <a href="#top">Back to top</a>

@@ -1,0 +1,57 @@
+{
+  "updatedAt": "2026-08-01T00:00:00.000Z",
+  "basic": {
+    "fullName": "Hasibul Islam",
+    "title": "Developer / Prospective Graduate Researcher",
+    "location": "",
+    "email": "",
+    "phone": "",
+    "summary": "I am Hasibul Islam. My work combines practical full-stack development with applied computing interests in algorithms, machine learning, distributed systems, and web-based tools."
+  },
+  "links": {
+    "github": "https://github.com/sifathasib",
+    "linkedin": "",
+    "googleScholar": "",
+    "importantLinks": []
+  },
+  "media": {
+    "profilePhotoUrl": "",
+    "cvUrl": "",
+    "selectedFiles": {}
+  },
+  "academic": {
+    "education": "",
+    "researchInterests": [
+      "Algorithms and graph theory: Python-based graph theory work and computing exercises that show interest in algorithmic problem solving.",
+      "Machine learning foundations: Notebook-based learning projects around machine learning concepts and experimental workflows.",
+      "Distributed and web systems: Course and API projects connected to backend services, REST patterns, and distributed computing topics.",
+      "Human-centered web tools: Browser-based image editing and HR application projects with user-facing workflows and applied interfaces."
+    ],
+    "coursework": [
+      "HTML, CSS, JavaScript, React practice, C#, ASP.NET MVC, PHP, Express APIs, Java exercises"
+    ],
+    "publications": [],
+    "achievements": [
+      "Public repositories, visible project variety, and code samples that can support job applications and professor outreach"
+    ]
+  },
+  "targets": {
+    "jobs": [
+      "Software developer",
+      "Backend developer",
+      "Web application developer"
+    ],
+    "phdFunding": [
+      "Funded PhD or research assistantship in computing-related areas"
+    ]
+  },
+  "projects": [
+    "ASP.NET MVC HR: Demonstrates web application structure, MVC organization, server-side logic, and business-domain workflows. https://github.com/sifathasib/ASP.NET-MVC-HR",
+    "Express REST Mongo: Backend API practice with routing, endpoint design, and persistence-oriented structure. https://github.com/sifathasib/express-rest-mongo",
+    "Graph Theory: Algorithm-oriented Python work that supports research applications in computing and theoretical foundations. https://github.com/sifathasib/Graph-Theory",
+    "ML Crash Course: Notebook-based machine learning practice useful for demonstrating preparation for applied research. https://github.com/sifathasib/Springer_ML_CrashCourse",
+    "Web Based Image Editor: Interactive browser project showing front-end logic, user interaction, and media-oriented tooling. https://github.com/sifathasib/Web_based_image_editor",
+    "PHP HR App: Server-side web application practice with forms, workflow thinking, and application logic. https://github.com/sifathasib/php-hr-app"
+  ],
+  "notes": ""
+}

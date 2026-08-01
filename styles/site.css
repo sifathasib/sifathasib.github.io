@@ -527,6 +527,30 @@ h3 {
   gap: 1rem;
 }
 
+.workflow-card {
+  display: grid;
+  grid-template-columns: 0.42fr 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: var(--blue);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.workflow-card h2 {
+  font-size: 2.1rem;
+}
+
+.workflow-card ol {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding-left: 1.4rem;
+  color: var(--muted);
+  font-weight: 620;
+}
+
 .form-section {
   display: grid;
   grid-template-columns: 0.42fr 1fr;
@@ -611,6 +635,18 @@ textarea:focus {
   background: var(--rose);
 }
 
+.file-button {
+  cursor: pointer;
+}
+
+.file-button input {
+  inline-size: 1px;
+  block-size: 1px;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .json-panel {
   display: grid;
   grid-template-columns: 0.42fr 1fr;
@@ -633,6 +669,7 @@ textarea:focus {
   .skills-section,
   .contact-section,
   .intake-hero,
+  .workflow-card,
   .form-section,
   .json-panel {
     grid-template-columns: 1fr;

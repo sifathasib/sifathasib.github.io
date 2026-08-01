@@ -6,15 +6,25 @@ const uploadPreview = document.querySelector("#upload-preview");
 const downloadButton = document.querySelector("#download-json");
 const copyButton = document.querySelector("#copy-json");
 const clearButton = document.querySelector("#clear-draft");
+const previewButton = document.querySelector("#preview-portfolio");
+const importInput = document.querySelector("#import-json");
 const fileInputs = [...document.querySelectorAll("[data-file-input]")];
 
 const fileState = {};
+const previewKey = "hasibul-portfolio-live-preview";
 
 function splitLines(value) {
+  if (Array.isArray(value)) return value.map((item) => String(item).trim()).filter(Boolean);
+  if (!value) return [];
+
   return value
     .split("\n")
     .map((item) => item.trim())
     .filter(Boolean);
+}
+
+function toTextLines(value) {
+  return splitLines(value).join("\n");
 }
 
 function getFormData() {
@@ -142,7 +152,7 @@ function downloadJson() {
   const blob = new Blob([preview.value], { type: "application/json" });
   const link = document.createElement("a");
   link.href = URL.createObjectURL(blob);
-  link.download = "portfolio-intake.json";
+  link.download = "portfolio-data.json";
   link.click();
   URL.revokeObjectURL(link.href);
 }
@@ -167,8 +177,54 @@ fileInputs.forEach((input) => {
 
 downloadButton.addEventListener("click", downloadJson);
 copyButton.addEventListener("click", copyJson);
+previewButton.addEventListener("click", () => {
+  saveDraft();
+  localStorage.setItem(previewKey, preview.value);
+  statusText.textContent = "Preview data saved";
+  window.open("index.html?preview=1", "_blank");
+});
+
+importInput.addEventListener("change", async () => {
+  const [file] = importInput.files;
+  if (!file) return;
+
+  const imported = JSON.parse(await file.text());
+  const values = {
+    fullName: imported.basic?.fullName || "",
+    title: imported.basic?.title || "",
+    location: imported.basic?.location || "",
+    email: imported.basic?.email || "",
+    phone: imported.basic?.phone || "",
+    summary: imported.basic?.summary || "",
+    github: imported.links?.github || "",
+    linkedin: imported.links?.linkedin || "",
+    scholar: imported.links?.googleScholar || "",
+    importantLinks: toTextLines(imported.links?.importantLinks),
+    profilePhotoUrl: imported.media?.profilePhotoUrl || "",
+    cvUrl: imported.media?.cvUrl || "",
+    education: imported.academic?.education || "",
+    researchInterests: toTextLines(imported.academic?.researchInterests),
+    coursework: toTextLines(imported.academic?.coursework),
+    publications: toTextLines(imported.academic?.publications),
+    achievements: toTextLines(imported.academic?.achievements),
+    jobTargets: toTextLines(imported.targets?.jobs),
+    phdTargets: toTextLines(imported.targets?.phdFunding),
+    projects: toTextLines(imported.projects),
+    notes: imported.notes || "",
+  };
+
+  Object.entries(values).forEach(([key, value]) => {
+    const field = form.elements[key];
+    if (field) field.value = value;
+  });
+
+  saveDraft();
+  statusText.textContent = "JSON imported";
+});
+
 clearButton.addEventListener("click", () => {
   localStorage.removeItem(storageKey);
+  localStorage.removeItem(previewKey);
   form.reset();
   Object.keys(fileState).forEach((key) => delete fileState[key]);
   renderFilePreview();
