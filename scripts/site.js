@@ -1,4 +1,5 @@
 const previewKey = "hasibul-portfolio-live-preview";
+const draftKey = "hasibul-portfolio-intake";
 const year = document.querySelector("#year");
 
 if (year) {
@@ -113,8 +114,9 @@ function renderPortfolioData(data) {
   setLink("githubRepos", links.github ? `${links.github.replace(/\/$/, "")}?tab=repositories` : "");
 
   const profileImage = document.querySelector("[data-portfolio-image='profile']");
-  if (profileImage && media.profilePhotoUrl) {
-    profileImage.src = media.profilePhotoUrl;
+  const profilePhoto = media.profilePhotoUrl || media.profilePhotoPreviewDataUrl;
+  if (profileImage && profilePhoto) {
+    profileImage.src = profilePhoto;
     profileImage.alt = `${basic.fullName || "Profile"} photo`;
   }
 
@@ -129,6 +131,45 @@ function renderPortfolioData(data) {
   renderCardList("[data-portfolio-list='skills']", skills, "Evidence");
 }
 
+function draftToPortfolioData(draft) {
+  return {
+    updatedAt: new Date().toISOString(),
+    basic: {
+      fullName: draft.fullName || "",
+      title: draft.title || "",
+      location: draft.location || "",
+      email: draft.email || "",
+      phone: draft.phone || "",
+      summary: draft.summary || "",
+    },
+    links: {
+      github: draft.github || "",
+      linkedin: draft.linkedin || "",
+      googleScholar: draft.scholar || "",
+      importantLinks: splitValue(draft.importantLinks),
+    },
+    media: {
+      profilePhotoUrl: draft.profilePhotoUrl || "",
+      profilePhotoPreviewDataUrl: "",
+      cvUrl: draft.cvUrl || "",
+      selectedFiles: {},
+    },
+    academic: {
+      education: draft.education || "",
+      researchInterests: splitValue(draft.researchInterests),
+      coursework: splitValue(draft.coursework),
+      publications: splitValue(draft.publications),
+      achievements: splitValue(draft.achievements),
+    },
+    targets: {
+      jobs: splitValue(draft.jobTargets),
+      phdFunding: splitValue(draft.phdTargets),
+    },
+    projects: splitValue(draft.projects),
+    notes: draft.notes || "",
+  };
+}
+
 async function loadPortfolioData() {
   const preview = localStorage.getItem(previewKey);
   if (preview) {
@@ -137,6 +178,16 @@ async function loadPortfolioData() {
       return;
     } catch {
       localStorage.removeItem(previewKey);
+    }
+  }
+
+  const draft = localStorage.getItem(draftKey);
+  if (draft) {
+    try {
+      renderPortfolioData(draftToPortfolioData(JSON.parse(draft)));
+      return;
+    } catch {
+      localStorage.removeItem(draftKey);
     }
   }
 

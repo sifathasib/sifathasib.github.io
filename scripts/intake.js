@@ -12,6 +12,7 @@ const fileInputs = [...document.querySelectorAll("[data-file-input]")];
 
 const fileState = {};
 const previewKey = "hasibul-portfolio-live-preview";
+const maxInlineImageSize = 1500000;
 
 function splitLines(value) {
   if (Array.isArray(value)) return value.map((item) => String(item).trim()).filter(Boolean);
@@ -48,6 +49,7 @@ function getFormData() {
     },
     media: {
       profilePhotoUrl: data.profilePhotoUrl || "",
+      profilePhotoPreviewDataUrl: fileState.profilePhotoFile?.[0]?.previewDataUrl || "",
       cvUrl: data.cvUrl || "",
       selectedFiles: fileState,
     },
@@ -69,6 +71,20 @@ function getFormData() {
 
 function updatePreview() {
   preview.value = JSON.stringify(getFormData(), null, 2);
+}
+
+function readImageDataUrl(file) {
+  return new Promise((resolve) => {
+    if (!file.type.startsWith("image/") || file.size > maxInlineImageSize) {
+      resolve("");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.addEventListener("load", () => resolve(reader.result));
+    reader.addEventListener("error", () => resolve(""));
+    reader.readAsDataURL(file);
+  });
 }
 
 function saveDraft() {
@@ -124,22 +140,38 @@ function renderFilePreview() {
     const item = document.createElement("li");
     const strong = document.createElement("strong");
     strong.textContent = field;
-    item.append(strong, `: ${file.name} (${Math.round(file.size / 1024)} KB)`);
+    const previewNote = file.previewDataUrl ? " - available for browser preview" : "";
+    item.append(strong, `: ${file.name} (${Math.round(file.size / 1024)} KB)${previewNote}`);
     list.append(item);
   });
   uploadPreview.append(list);
+
+  const imagePreview = fileState.profilePhotoFile?.[0]?.previewDataUrl;
+  if (imagePreview) {
+    const image = document.createElement("img");
+    image.className = "selected-photo-preview";
+    image.src = imagePreview;
+    image.alt = "Selected profile preview";
+    uploadPreview.append(image);
+  }
 }
 
-function updateFileState(input) {
-  const files = [...input.files].map((file) => ({
-    name: file.name,
-    type: file.type,
-    size: file.size,
-    lastModified: new Date(file.lastModified).toISOString(),
-  }));
+async function updateFileState(input) {
+  const files = await Promise.all(
+    [...input.files].map(async (file) => ({
+      name: file.name,
+      type: file.type,
+      size: file.size,
+      lastModified: new Date(file.lastModified).toISOString(),
+      previewDataUrl: input.name === "profilePhotoFile" ? await readImageDataUrl(file) : "",
+    }))
+  );
 
   if (files.length > 0) {
     fileState[input.name] = files;
+    if (input.name === "profilePhotoFile" && !files[0].previewDataUrl) {
+      statusText.textContent = "Photo selected. Add a URL/path for publish, or choose an image under 1.5 MB for browser preview.";
+    }
   } else {
     delete fileState[input.name];
   }
